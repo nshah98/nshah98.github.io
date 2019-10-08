@@ -1,0 +1,193 @@
+/* style adapted from aleitch */
+/* Neel Shah, INST377 - 0103 */
+
+h1
+{
+  font-weight: bold;
+  font-size: 45px;
+  text-align: center;
+}
+
+h2
+{
+  font-weight: bold;
+  color: black;
+  font-size: 35px;
+  text-align: center;
+}
+
+h3
+{
+  font-weight: bold;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+p
+{
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+
+.heading
+{
+  float: center;
+  background-color: darkred;
+  width: 60%;
+  margin: auto;
+  padding : 2%;
+}
+
+.heading h1, .heading h3, .heading p
+{
+  color: white;
+  font-weight: normal;
+}
+
+
+.introduction
+{
+  display: flex;
+  color:black;
+  border: solid white;
+  padding: 2%;
+  width: 60%;
+  margin: auto;
+}
+
+.aboutme
+{
+  width: 70%;
+  background-color:#99CC99;
+  padding : 1.5%;
+}
+
+.picture
+{
+  background-color: #99CC99;
+  flex: 1;
+}
+
+.links
+{
+  display: inline;
+  float: left;
+  background-color: #99CC99;
+  color: black;
+  border: solid white;
+  padding : 3%;
+}
+
+img.center
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pictureAndBorder
+{
+  border-width: 25px;
+  border-color: #99CC99;
+  border-style: solid;
+  flex: 1;
+  width: 600;
+  height: 700;
+}
+
+ol
+{
+  width: 50%;
+  margin: auto;
+}
+
+.work
+{
+  display: flex;
+  color:black;
+  border: solid white;
+  padding : 2%;
+  width: 60%;
+  margin: auto;
+}
+
+.experience
+{
+  width: auto;
+  background-color:#99CC99;
+  padding : 1.5%;
+  width: 60%;
+  margin: auto;
+}
+
+.workpicture
+{
+  border-width: 25px;
+  border-style: solid;
+  border-color: darkred;
+  flex: 1;
+  margin: auto;
+  width: 10;
+
+}
+
+.footer
+{
+  display: flex;
+  background-color:lightgreen;
+  padding : center;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.email, .phone
+{
+  background: #99CC99;
+  border-width: 25px;
+  border-color: lightgreen;
+  border-style: solid;
+  font-size: 18px;
+  padding: 5%;
+  
+}
+
+.address
+{
+  background: #99CC99;
+  border-width: 25px;
+  border-color: lightgreen;
+  border-style: solid;
+  font-size: 18px;
+  padding: 5%;
+  text-align: center;
+}
+.phone p
+{
+  text-align:center;
+  font-size: 20px;
+}
+
+.title
+{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 200%;
+  color: black;
+}
+
+.getInTouchTitle
+{
+  text-align:center;
+  color: white;
+  text-decoration: underline;
+}
+
+body
+{
+  background-color: lightyellow;
+}
