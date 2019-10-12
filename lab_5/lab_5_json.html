@@ -12,7 +12,6 @@
       <div class="header">Test JSON page</div>
       <button class="button" id="change" onclick="changeData()">Click me to replace list entries</button>
       <div class="content">
-        <ol class="testing"></ol>
         <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
           <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
@@ -29,6 +28,9 @@
         </ul>
       </div>
       <div class="footer">
+        <p id="country_code_html"></p>
+        <p id="code_to_name"></p>
+        <ol id="numbered"></ol>
       </div>
     </div>
   </div>
@@ -285,39 +287,39 @@
       country_code.push(countries[i].code);
     }
 
-    console.log("List of countries in the world", countries);
-    sessionStorage.setItem('code', JSON.stringify(country_code));
+    //document.getElementById("numbered").innerHTML = numbered_countries;
 
-    function shuffle(array) {
-      array.sort(() => Math.random() - 0.5);
-    }
+
+    console.log("List of countries in the world", countries);
+    sessionStorage.setItem('code', JSON.stringify(countries));
 
     function changeData(){
-      //getting the stored item by calling the key
       const data = sessionStorage.getItem('code');
-      //using the parse function to convert the string back into an array
       const code_list = JSON.parse(data);
+      const element = document.querySelector('.instructions')
 
-      //converting the country code array back into an array of the country name
-      for (var i = 0; i < code_list.length; i++) {
-        if (code_list[i] == (country_code[i])){
-          code_list[i] = countries[i].name;
-        }
-      }
-
-      code_list.sort(() => Math.random() - 0.5);
-
-      //get the instructions div which will be changed when the button is clicked
-      const element = document.querySelector('.testing')
-      document.querySelector('.instructions').innerHTML = "";
-      
-      //this is the variable that will contain all the list objects that will be added to the instructions div
       var numbered_countries = "";
       for (var i = 0; i < 50; i++) {
-        numbered_countries += "<li>" + code_list[i]+ "</li>";
+        numbered_countries += "<li>" + changeData()[i]+ "</li>";
       }
       element.innerHTML = numbered_countries;
+      for (var i = 0; i < data.length; i++) {
+        if (data[i] == (country_code[i])){
+          data[i] = countries[i].name;
+        }
+      }
+      return data;
     }
+
+
+    console.log(document.getElementById("load").click());
+    console.log("List of Country Codes after click", data);
+    console.log(document.getElementById("change").click());
+    console.log("Country Code Array turned into Country Name Array", parsed_country_code);
+
+
+
+
 
 
   </script>
