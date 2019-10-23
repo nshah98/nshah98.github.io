@@ -19,9 +19,7 @@
   </div>
   <script>
     function loadData() {
-      fetch('ajax_sample.json', {
-        mode: 'cors'
-      })
+      fetch('ajax_sample.json')
         .then(res => res.json())
         .then(res => res.sort(() => Math.random() - 0.5))
         .then(res => res.map(c => c.name + " " + c.code))
