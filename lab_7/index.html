@@ -39,12 +39,16 @@
         .then(data => {
           name_element = document.querySelector(".header");
           const result = data.find(header_change);
-          var final_name = result.split(" ");
+          var name_array = result.split(" ");
+          var final_name = "";
+          for(var i = 1; i < name_array.length; i++) {
+            final_name += name_array[i] + " ";
+          }
           console.log(result);
           name_element.innerHTML = "UMD Bus Routes " + final_name;
           return data;
         })
-        //.then(console.log(data))
+        .then(data => console.log(data))
     }
 
     function header_change(items) { 
