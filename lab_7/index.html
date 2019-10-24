@@ -22,7 +22,7 @@
       fetch('https://api.umd.io/v0/bus/routes')
         .then(res => res.json())
         .then(res => res.sort(() => Math.random() - 0.5))
-        .then(res => res.map(c => c.route_id + " " + c.title))
+        .then(res => res.map(c => "(" + c.route_id + ")" + " " + c.title))
         .then(data => {
           const a = data.map((item) => {
             return item;
