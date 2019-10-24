@@ -34,8 +34,21 @@
           }
           const element = document.querySelector('.testing');
           element.innerHTML = final_text;
-          
+          return data;
           })
+        .then(data => {
+          name_element = document.querySelector(".header");
+          const result = data.find(header_change);
+          var final_name = result.split(" ");
+          console.log(result);
+          name_element.innerHTML = "UMD Bus Routes " + final_name;
+          return data;
+        })
+        //.then(console.log(data))
+    }
+
+    function header_change(items) { 
+      return items;
     }
         
   </script>
