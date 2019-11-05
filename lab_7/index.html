@@ -39,6 +39,7 @@
         .then(data => {
           name_element = document.querySelector(".header");
           const result = data.find(header_change);
+          
           var name_array = result.split(" ");
           var final_name = "";
           for(var i = 1; i < name_array.length; i++) {
